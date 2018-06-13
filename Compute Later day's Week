@@ -1,0 +1,21 @@
+package hellojava;
+import java.util.Scanner;
+
+
+public class DisplayTime {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input= new Scanner(System.in);
+		
+		//write today's week
+		System.out.print("input today_week :");
+		int today_Week =input.nextInt();
+		
+		// write x day'sweek
+		System.out.print("input  the day number you want to inquire:");
+		int DayNumber =input.nextInt();
+		
+		int Result = (today_Week + DayNumber)%7;
+		System.out.println(DayNumber +" later week is" + Result+ ".");
+	}
+}
