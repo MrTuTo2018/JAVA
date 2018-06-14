@@ -1,0 +1,24 @@
+//计算商品税的小程序
+
+package hellojava;
+import java.util.Scanner; 
+//import java.text.DecimalFormat;
+public class SalesTax {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+    Scanner input = new Scanner(System.in);
+    System.out.print("enter your PurchaseAmount:");
+	Double PurchaseAmount = input.nextDouble();
+	
+	//这里就是在保留你要的小数位数
+	
+    java.text.DecimalFormat Myformat = new java.text.DecimalFormat("0.000");
+    //（0.00）括号里小数点后有几个零就是保留几位小数，这个是两位
+    
+    double Taxs = PurchaseAmount * 0.06;		
+	System.out.println("PurchaseAmount Tax is " + Myformat.format(Taxs) );
+	}
+
+}
