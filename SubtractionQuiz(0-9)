@@ -1,0 +1,29 @@
+package hellojava;
+import java.util.Scanner;
+
+public class SubtractionQuiz {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+   int Number1 = (int)(Math.random()*10);
+   int Number2 = (int)(Math.random()*10);
+   
+   if(Number1 < Number2) {
+	  int temp = Number1;
+	      Number1 = Number2;
+	      Number2 = temp;
+   }
+   
+   Scanner input = new Scanner(System.in);
+   System.out.print("what is "+Number1+"-"+Number2+" =  ");
+   int answer = input.nextInt();
+   
+   if(Number1-Number2==answer) { 
+	   System.out.println("your answer is correct!");
+   }
+   else {
+	   System.out.println("you are wrong!"
+	   		+ "The correct answer is"+(Number1-Number2));
+       }
+	}
+}
