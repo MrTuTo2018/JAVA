@@ -1,0 +1,21 @@
+package hellojava;
+import java.util.*;
+public class OrderTwoCity {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     Scanner input = new Scanner(System.in);
+     System.out.print("enter the first city name(upper):");
+     String City1 = input.nextLine();
+     
+     System.out.print("enter the second city name(upper):");
+     String City2 = input.nextLine();
+     
+     if(City1.compareTo(City2) < 0)
+         System.out.println("CityName is "+City2 + City1);
+     else
+    	 System.out.println("CityName is "+City1+City2);
+    	 
+		
+	}	
+}
