@@ -1,0 +1,27 @@
+package hellojava;
+
+public class MultiplicationTable {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    System.out.println("          Multiplication Table");
+    int i=1;
+    int j=1;
+    System.out.print("    ");
+    for(j=1;j<10;j++) {
+    	System.out.print("   "+j);
+    /*print()方法在输出括号里指定的字符串后就结束操作，而不再添加回车，
+    	光标停留在字符串最后一个字符的右边，println()则是添加回车，光标停在下一行。*/	
+    }
+    System.out.println("\n----------------------------------------------------------");
+   
+    for(i=1;i<10;i++) {
+     System.out.print(i+" | ");
+     for(j=1;j<10;j++) {
+       System.out.printf("%4d",i*j);
+     //注意%4的后面要用逗号调整，表示占四个字节
+     }
+      System.out.println(); 
+   }
+}
+}
