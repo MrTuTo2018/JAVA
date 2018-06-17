@@ -1,0 +1,15 @@
+package hellojava;
+
+public class FutureTuition {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    double Tuition = 10000;
+    int count = 0;
+    while(Tuition<20000) {
+    Tuition = Tuition + Tuition*0.07;
+    count++;	
+    }
+    System.out.print(count);
+	}
+}
