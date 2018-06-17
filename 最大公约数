@@ -1,0 +1,25 @@
+package hellojava;
+import java.util.Scanner;
+
+public class MostCommonDivisor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner input = new Scanner(System.in);
+    System.out.print("enter your first number:");
+    int Number1 = input.nextInt();
+    
+    System.out.print("enter your second number:");
+    int Number2 = input.nextInt();
+    
+    int k =2;
+    int gcd=0;
+    while(k<=Number1 && k<=Number2) {
+    	if(Number1 % k==0 && Number2 % k==0)
+    		gcd=k;
+    	k++;
+    }
+    System.out.println(gcd);
+	}
+
+}
