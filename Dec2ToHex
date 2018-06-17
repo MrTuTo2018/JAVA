@@ -1,0 +1,24 @@
+package hellojava;
+import java.util.Scanner;
+public class Dec2ToHex {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    Scanner input = new Scanner(System.in);
+    System.out.print("enter your number:");
+    int Decimal = input.nextInt();
+    
+    String Hex = "";
+    while(Decimal != 0) {
+    int HexValue = Decimal % 16;
+    
+    char HexDigit = (HexValue <= 9 && HexValue >= 0) ? 
+    		(char)(HexValue +'0') : (char)(HexValue-10 + 'A');
+    		Hex = HexDigit + Hex  ;
+                //哈哈哈哈，这个地方别弄反了，不然结果就反了，搞懂了真舒服啊
+    		Decimal = Decimal/16;	
+    }
+    	System.out.println(Hex);	
+	}
+
+}
