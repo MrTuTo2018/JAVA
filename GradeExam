@@ -1,0 +1,26 @@
+import java.util.Arrays;
+
+public class GradeExam {
+
+	public static void main(String[] args) {
+	
+		char[][] answers = {
+				{'D','C','B','A','A','B','C','D'},
+				{'A','B','C','D','A','B','C','D'},
+				{'C','B','C','A','D','B','C','A'}	
+		};
+		char[] keys = {'A','B','C','D','A','B','C','D'};
+		
+		for(int i=0; i < answers.length; i++ ) {
+			int correctCount = 0;
+		    for(int j=0; j < answers[i].length;j++) {
+		    	if(answers[i][j] == keys[j] )
+			correctCount++;
+			
+		  }
+		System.out.println(correctCount);
+	
+		}
+	}
+}
+	
