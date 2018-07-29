@@ -1,0 +1,87 @@
+//类部分的代码
+
+public class Mypoint {
+       private double x;
+       private double y;
+       
+    public  Mypoint() {
+    	x=0;
+    	y=0;  	 
+     }
+    
+    public Mypoint(double x,double y) {
+    this.x=x;
+    this.y=y;	
+    }
+    
+    //构造一个方法实现求两点距离
+    public void getD(double x1,double y1,double x2,double y2) {
+    	double xDifference;
+    	double yDifference;
+    	
+    	
+    	////判断x的正负取绝对值
+    	if (x1<x2) {
+    	 xDifference = -(x1-x2) ;
+    	}
+    	else  xDifference = (x1-x2);
+    	
+    	
+    	//判断y的正负取绝对值
+    	if(y1<y2) {
+    		 yDifference = y1-y2 ;
+    	}
+    	else yDifference = (y1-y2);
+    	//先算平方和，再算平方根
+    	  double  sumSquare = (xDifference  * xDifference) + (yDifference * yDifference);
+    	  double  squarRoot = Math.sqrt(sumSquare) ;
+    		System.out.println( squarRoot);
+    	
+    }
+    
+    
+}
+
+
+
+
+
+//实例部分代码
+package helloworld;
+import java.util.Scanner;
+
+public class MypointDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       Mypoint d1 = new Mypoint();
+       Scanner  scanner  = new Scanner(System.in);
+       double x1; 
+       double y1;
+       double x2;
+       double y2;
+       x1=scanner.nextDouble();
+       y1=scanner.nextDouble();
+       
+       System.out.print("\n");
+       
+       x2=scanner.nextDouble();  
+       y2=scanner.nextDouble();
+       
+   
+		d1.getD(x1, y1, x2, y2);
+	
+		
+	}
+
+}
+
+
+
+
+//输入验证计算结果显示正确
+
+200.1 200.2 200.3 200.4
+
+  0.28284271247464315
+
